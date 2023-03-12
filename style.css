@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(172, 229, 229);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* alarm heading container style starts */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alarm-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+    letter-spacing: 1px;
+}
+
+.alarm-btn {
+    width: 100px;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: white;
+    background: linear-gradient(to right, red, orange);
+    cursor: pointer;
+}
+
+/* alarm heading container style  ends*/
+
+
+/* Alarm list style starts */
+.alarm-heading {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.alarms-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.left {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.right .delete-btn {
+    font-size: 18px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 4px;
+    background: linear-gradient(to right, red, rgba(255, 0, 0, 0.8));
+    cursor: pointer;
+    color: white;
+}
+
+/* Alarm list style starts */
