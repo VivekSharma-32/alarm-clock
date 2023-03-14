@@ -5,27 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alarm Clock</title>
-    <!-- Custom css file  -->
+
+    <!-- External CSS File -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- custom javascript file  -->
-    <div class="container">
-      <h1 class="heading">Alarm Clock</h1>
-      <div class="header">
-        <div class="alarm-time" id="time"></div>
-        <div><button class="alarm-btn">Set Alarm</button></div>
-      </div>
-      <h2 class="alarm-heading">Alarms</h2>
-
-      <div class="alarms-list">
-        <div class="left">12:24:57</div>
-        <div class="right">
-          <button class="delete-btn">Delete</button>
+  <body onload="initClock()">
+    <div class="alarm">
+      <div class="datetime">
+        <div class="date">
+          <span id="dayName">Day</span>, <span id="month">Month</span>,
+          <span id="dayNum">00</span>,
+          <span id="year">Year</span>
         </div>
+        <div class="time">
+          <span id="hour">00</span>: <span id="minutes">00</span>:
+          <span id="seconds">00</span>:
+          <span id="period">AM</span>
+        </div>
+        <button id="stopAlarm" onclick="stopAlarm()">Stop Alarm</button>
       </div>
+
+      <hr />
+
+      <div class="setAlarm">
+        <div class="grid">
+          <select>
+            <option value="setHour" selected hidden>Hour</option>
+          </select>
+        </div>
+
+        <div class="grid">
+          <select>
+            <option value="setMinute" selected hidden>Minute</option>
+          </select>
+        </div>
+
+        <div class="grid">
+          <select>
+            <option value="AM/PM" selected hidden>AM/PM</option>
+          </select>
+        </div>
+
+        <button id="btn-setAlarm" type="submit">Set Alarm</button>
+      </div>
+
+      <hr />
+
+      <h3 id="alarm-h3"></h3>
+
+      <div class="alarmList"></div>
     </div>
 
+    <!-- External Javascript File -->
     <script src="script.js"></script>
   </body>
 </html>
